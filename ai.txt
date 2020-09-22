@@ -1,0 +1,58 @@
+class node{
+w1=.5;
+w2=.5;
+x1=0;
+x2=0;
+h;
+test=false;
+
+//learn
+learn(a,b,c){
+this.x1=a;
+this.x2=b;
+this.h=(this.x1*this.w1)+(this.x2*this.w2); 
+console.log(this.h,this.w1,this.w2)
+//test var
+if (Math.floor(this.h)!=c ){
+this.w1 = this.w1+ (.00000001 * (c-this.h)*this.x1);
+this.w2 = this.w2+ (.00000001 * (c-this.h)*this.x2);
+}else{
+console.log("true");
+this.test=true;
+}
+}
+//test
+ans(a,b){
+this.x1=a;
+this.x2=b;
+this.h=(this.x1*this.w1)+(this.x2*this.w2)
+this.h = Math.floor(this.h)
+if(this.h>0){
+console.log("fat");
+}else{
+console.log("not fat");
+
+}
+}
+
+}
+var a=0
+let ai = new node();
+while (ai.test==false){
+a++;
+console.log(a);
+ai.learn(270,270,1)
+
+}
+ai.test = false;
+a=0
+while (ai.test==false){
+a++;
+console.log(a);
+ai.learn(150,150,0)
+}
+
+console.log(a);
+ai.ans(200,200);
+
+// Usage:

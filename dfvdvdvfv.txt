@@ -1,0 +1,30 @@
+var can = document.getElementById("a").getContext("2d");
+var x = [0];
+var y = [0];
+
+
+
+for(var row = 0;row<30;row++){
+  y[row] = [];
+  for(var col = 0;col<30;col++){
+    
+    y[row][col]=0;
+    if(row == 1){
+      y[row][col]=1;
+    }
+  }
+}
+
+
+
+
+
+
+for(var x = 0;x<30;x++){
+console.log(y[x]);
+
+
+
+
+
+}
